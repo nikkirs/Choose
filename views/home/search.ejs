@@ -1,0 +1,46 @@
+<% include ./partials/header %>
+
+<div class="container"style="margin:10px auto" >
+	<div class="row" >
+		<div class="col-lg-5">
+			<div class="thumbnail">
+				<img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg">
+				<div class="caption">
+					<h2><%=fchoice%></h2>
+				</div>
+					<div class="row">
+						<p><button id="count1" class="btn btn-success col-lg-4" style="width:15%;margin:20px">UpVote</button><span><h1 id="h">0</h1></span></p>
+							<button class="btn btn-lg btn-primary col-lg-4" style="margin-left:150px">view more</button>
+					</div>
+			</div>
+		</div>
+		<div class="col-lg-2" style="margin-top:200px">
+			<div class="thumbnail">
+				<img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg">
+
+			</div>
+		</div>
+		<div class="col-lg-5">
+			<div class="thumbnail">
+				<img src="http://c1.staticflickr.com/9/8450/8026519634_f33f3724ea_b.jpg">
+				<div class="caption">
+					<h2><%=schoice%></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+	var count1 = document.querySelector("#count1");
+	var h = document.querySelector("#h");
+	var i =0;
+	count1.addEventListener("click",function(){
+		i++;
+		h.textContent=i;
+	})
+</script>
+
+<% include ./partials/footer %>

@@ -1,0 +1,10 @@
+<% include ./partials/header %>
+
+<%questions.forEach(function(question){%>
+	</h1><%=question.fchoice%></h1>
+	</h1><%=question.schoice%></h1>
+	<button><a href="/all/<%=question._id%>">view more</a></button>
+<%})%>
+
+
+<% include ./partials/footer %>

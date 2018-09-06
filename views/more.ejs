@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<%if(commentid==1){%>
+	<%	questions.fcomments.forEach(function(comment){%>
+	<h1><%=comment.author%></h1>
+	<h1><%=comment.text%></h1>
+	<%})%>
+
+<%}else{%>
+	<%	questions.scomments.forEach(function(comment){%>
+	<h1><%=comment.author%></h1>
+	<h1><%=comment.text%></h1>
+	<%})%>
+<%}%>
+
+	<a class="btn btn-lg btn-primary" href="/all/<%=questions._id%>/comments/new/<%=commentid%>">add new comment</a>
+<% include partials/footer %>

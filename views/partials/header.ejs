@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHOOSE</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/app.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+	<!--navbar-->
+	<nav class="navbar navbar-inverse navbar-static-top" style="margin-bottom: 0" >
+		<div class="container">
+		<div class="navbar-header">
+			<a href="/" class="navbar-brand">CHOOSE</a>
+		</div>
+		<div class="nav navbar-nav">
+			<li> <a href="/">HOME</a></li>
+			<li><a href="/contact">CONTACT</a></li>
+		</div>
+		<div class="nav navbar-nav navbar-right">
+				<%if(!currentUser){%>
+				<li><a href="/login">Log In</a></li>
+				<li><a href="/register">Sign Up</a></li>
+			<%}else{%>
+				<li><a href="#">Signed in as <%=currentUser.username%></a></li>
+				<li><a href="/logout">Log Out</a></li>
+			<%}%>
+			</div>
+	</div>
+	</nav>

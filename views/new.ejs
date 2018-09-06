@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+
+<h1>Comment to <%=questions.fchoice%><h1>
+<div class="container">
+<div class="row" style="width:30%;margin:50px auto">
+	<form action="/all/<%=questions._id%>/comments/<%=commentid%>" method="post">
+		<div class="form-group">
+			<input type="text" placeholder="text" name="comment[text]" style="width:100%">
+		</div>
+		<div class="form-group">
+			<input type="text" placeholder="author" name="comment[author]" style="width:100%">
+		</div>
+		<div class="form-group ">
+			<button class="btn btn-lg btn-primary btn-block" > Submit</button>
+		</div>
+	</form>
+</div>
+</div>
+
+<% include partials/footer %>

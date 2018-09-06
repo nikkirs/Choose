@@ -1,0 +1,63 @@
+<% include ./partials/header %>
+
+<div class="container"style="margin:10px auto" >
+	<div class="row" >
+		<div class="col-lg-5">
+			<div class="thumbnail">
+				<h1 style="text-align:center"><%=questions.fchoice.toUpperCase()%></h1>
+					<div class="row" style="margin:20px 15px">
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-6">
+									<a href="/search/<%=questions._id%>/a" class="btn btn-success hh" style="width:60px;margin:20px">Upvote</a>
+								</div>
+								<div class="col-lg-3 pull-right">
+									<h1><%=questions.flike%></h1>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 pull-right">
+						<a href="/comments/<%=questions._id%>/1" class="btn btn-success col-lg-4 hh" style="width:80%;margin:20px">View More</a>
+						</div>
+					</div>
+			</div>
+		</div>
+		<div class="col-lg-2" style="margin-top:20px">
+			<div class="thumbnail">
+				<h1 style="text-align:center">V/s</h1>
+			</div>
+		</div>
+		<div class="col-lg-5">
+			<div class="thumbnail">
+				<h1 style="text-align:center"><%=questions.schoice.toUpperCase()%></h1>
+				<div class="row" style="margin:20px 15px">
+						<div class="col-lg-4">
+							<div class="row">
+								<div class="col-lg-6">
+									<a href="/search/<%=questions._id%>/b" class="btn btn-success hh" style="width:60px;margin:20px">Upvote</a>
+								</div>
+								<div class="col-lg-3 pull-right">
+									<h1><%=questions.slike%></h1>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 pull-right">
+						<a href="/comments/<%=questions._id%>/2" class="btn btn-success col-lg-4 hh" style="width:80%;margin:20px">View More</a>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+document.getElementByClass("hh").onclick = function() {
+    //disable
+    this.disabled = true;
+
+    //do some validation stuff
+}
+</script>
+
+
+<% include ./partials/footer %>
